@@ -1,3 +1,13 @@
+//Terraform Block
+terraform {
+  backend "s3" {
+    bucket         = "terraform-dependency"
+    region         = "us-east-1"
+   // encrypt        = true(optional)
+  }
+}
+
+
 //provider Block
 provider "aws" {
     region = "ap-south-1"
