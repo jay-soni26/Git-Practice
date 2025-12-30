@@ -19,7 +19,7 @@ resource "aws_instance" "terafform" {
     ami = var.ami_id
     instance_type = var.instance_type
     key_name = var.key_name
-    vpc_security_group_ids = ["sg-08de88a7810b42a8f"]  
+    vpc_security_group_ids = ["sg-04058ffdbb7be7e26"]  
     tags = {
       name= "my instance"
     }
