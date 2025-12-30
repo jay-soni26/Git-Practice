@@ -20,7 +20,6 @@ resource "aws_instance" "terafform" {
     instance_type = var.instance_type
     key_name = var.key_name
     vpc_security_group_ids = ["sg-08de88a7810b42a8f"]  
-    availability_zone = "ap-east-1a"
     tags = {
       name= "my instance"
     }
