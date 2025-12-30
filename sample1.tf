@@ -37,11 +37,11 @@ variable "key_name" {
   
 }
 
+
 //outputs Block
 output "instance_id" {
   value = aws_instance.terafform.id
 }
-
 output "instance_public_ip" {
   value = aws_instance.terafform.public_ip
 }
