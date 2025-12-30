@@ -27,7 +27,7 @@ resource "aws_instance" "terafform" {
 }   
 //variables Block
 variable "ami_id" {  
-  default = "ami-02b8269d5e85954ef"
+  default = "ami-068c0051b15cdb816"
 }
 variable "instance_type" {
   default = "t3.micro"
