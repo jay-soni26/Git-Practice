@@ -1,7 +1,7 @@
 - name: "my first ansible playbook"
   hosts: all
   vars: 
-    myname: "Jay"
+     name: "Jay"
   tasks:
     - name: "print hello world"
       debug:
