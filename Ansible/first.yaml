@@ -12,3 +12,9 @@
     - name: "print variable message"
       debug:
         msg: "Welcome {{name}} to Ansible"
+    - name: register value example
+      shell: hostname
+      register: myhostvalue
+    - name: print hostname value from register
+      debug:
+         msg: "{{myhostvalue.stdout}}"
