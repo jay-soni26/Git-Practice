@@ -1,0 +1,9 @@
+name: "my first ansible playbook"
+hosts: all
+tasks:
+  - name: "print hello world"
+    debug:
+      msg: "Hello Ansible"
+  - name: "print custom message"
+    debug:
+      msg: "This is my first Ansible playbook"
