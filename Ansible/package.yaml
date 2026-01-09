@@ -4,9 +4,9 @@
   tasks:
     - name : Install apache2 on debian
       package:
-        name: apache
+        name: apache2
         state: latest
-      when: ansible_os_family == ""Debian"
+      when: ansible_os_family == "Debian"
 
     - name : Start apache2
       service:
