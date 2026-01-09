@@ -8,5 +8,6 @@
   copy:
     src : "."
     dest : "{{destfile}}"
+  become: yes
   notify :
     - start apache2
