@@ -1,0 +1,4 @@
+- name : Deploy static website on apache 2
+  hosts : all
+  roles :
+    - sample_role
