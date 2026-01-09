@@ -6,7 +6,7 @@
   when : ansible_os_family == "Debian"
 - name : Deploy static website on apache2
   copy:
-    src : "{{srcfile}}"
+    src : "."
     dest : "{{destfile}}"
   notify :
     - start apache2
