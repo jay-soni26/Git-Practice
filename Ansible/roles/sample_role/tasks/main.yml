@@ -1,5 +1,5 @@
 # tasks file for sample_roles
-- name : install apache2
+- name : Install apache2
   package:
     name : "{{ pkg }}"
     state : latest

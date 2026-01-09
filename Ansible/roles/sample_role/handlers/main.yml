@@ -1,5 +1,5 @@
 - name : start apache2
   service:
-    - name : apache2
-    - state : started
-    - enabled : yes
+    name : apache2
+    state : started
+    enabled : yes
