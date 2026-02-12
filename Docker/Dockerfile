@@ -14,7 +14,7 @@ RUN apk add --no-cache curl tar && \
     tar -xzf apache-tomcat-${TOMCAT_VERSION}.tar.gz
 
 #--- stage 2: create final image ---
-FROM openjdk:11
+FROM tomcat:9.0-jdk17-temurin
 ENV CATALINA_HOME=/opt/tomcat
 ENV PATH=$CATALINA_HOME/bin:$PATH
 COPY --from=downloader /tmp/apache-tomcat-* $CATALINA_HOME
