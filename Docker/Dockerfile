@@ -14,7 +14,7 @@ RUN apk add --no-cache curl tar && \
     tar -xzf apache-tomcat-${TOMCAT_VERSION}.tar.gz
 
 #--- stage 2: create final image ---
-FROM openjdk:17-slim
+FROM openjdk:latest
 ENV CATALINA_HOME=/opt/tomcat
 ENV PATH=$CATALINA_HOME/bin:$PATH
 COPY --from=downloader /tem/apache-tomcat-* $CATALINA_HOME
