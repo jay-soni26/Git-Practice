@@ -6,7 +6,7 @@
 # CMD ["apache2ctl", "-D" , "FOREGROUND"]    
 
 #--- stage 1: download and extract Tomcat ---
-From alpine:latest as downloader
+FROM alpine:latest as downloader
 ENV TOMCAT_VERSION=9.0.107
 WORKDIR /tem
 RUN apk add --no-cache curl tar && \
