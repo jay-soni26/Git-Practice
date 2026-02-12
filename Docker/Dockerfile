@@ -8,15 +8,15 @@
 #--- stage 1: download and extract Tomcat ---
 FROM alpine:latest as downloader
 ENV TOMCAT_VERSION=9.0.107
-WORKDIR /tem
+WORKDIR /tmp
 RUN apk add --no-cache curl tar && \
     curl -O https://downloads.apache.org/tomcat/tomcat-9/v${TOMCAT_VERSION}/bin/apache-tomcat-${TOMCAT_VERSION}.tar.gz && \
     tar -xzf apache-tomcat-${TOMCAT_VERSION}.tar.gz
 
 #--- stage 2: create final image ---
-FROM openjdk:17-jdk-slim
+FROM openjdk:11
 ENV CATALINA_HOME=/opt/tomcat
 ENV PATH=$CATALINA_HOME/bin:$PATH
-COPY --from=downloader /tem/apache-tomcat-* $CATALINA_HOME
+COPY --from=downloader /tmp/apache-tomcat-* $CATALINA_HOME
 EXPOSE 8080
 CMD ["catalina.sh", "run"]
