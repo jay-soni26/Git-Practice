@@ -10,7 +10,7 @@ FROM alpine:latest as downloader
 ENV TOMCAT_VERSION=9.0.107
 WORKDIR /tmp
 RUN apk add --no-cache curl tar && \
-    curl -O https://downloads.apache.org/tomcat/tomcat-9/v${TOMCAT_VERSION}/bin/apache-tomcat-${TOMCAT_VERSION}.tar.gz && \
+    curl -O https://archive.apache.org/dist/tomcat/tomcat-9/v${TOMCAT_VERSION}/bin/apache-tomcat-${TOMCAT_VERSION}.tar.gz && \
     tar -xzf apache-tomcat-${TOMCAT_VERSION}.tar.gz
 
 #--- stage 2: create final image ---
