@@ -6,7 +6,7 @@ services:
     volumes:
       - /var/lib/docker/volumes/data:/var/www/html
   tomcat-sever:
-    image: apache/tomcat:9.0
+    image: jaysoni2/docker1:firstdockerfile
     ports:
       - 8080:8080
     environment:
