@@ -1,10 +1,13 @@
+# ---apache server installation and basic web page setup---
 # FROM ubuntu:latest
 # ENV DEBIAN_FRONTEND=noninteractive
 # RUN apt-get update && apt-get install apache2 -y
 # COPY index.html /var/www/html/index.html
 # EXPOSE 80 
 # CMD ["apache2ctl", "-D" , "FOREGROUND"]    
+#---------------------------------------------------------------
 
+#--- stage 1: download and extract Tomcat using multi-stage docker file ---
 #--- stage 1: download and extract Tomcat ---
 FROM alpine:latest as downloader
 ENV TOMCAT_VERSION=9.0.107
