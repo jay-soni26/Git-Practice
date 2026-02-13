@@ -1,12 +1,12 @@
 services:
   webserver-apache2:
-    image: jaysoni2/docker1:myimage-apache2
+    image: surajbele/batch19:apache2
     ports:
       - 80:80
     volumes:
       - /var/lib/docker/volumes/data:/var/www/html
   tomcat-sever:
-    image: jaysoni2/docker1:firstdockerfile
+    image: apache/tomcat:9.0
     ports:
       - 8080:8080
     environment:
