@@ -1,6 +1,6 @@
 services:
   webserver-apache2:
-    image: surajbele/batch19:apache2
+    image: apache:latest
     ports:
       - 80:80
     volumes:
