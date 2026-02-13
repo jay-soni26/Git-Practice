@@ -1,6 +1,6 @@
 services:
   webserver-apache2:
-    image: apache:latest
+    image: jaysoni2/docker1:myimage-apache2
     ports:
       - 80:80
     volumes:
